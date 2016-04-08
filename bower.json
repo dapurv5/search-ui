@@ -12,6 +12,7 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "bootstrap": "3.3.6",
-    "npm": "3.3.6"
+    "npm": "3.3.6",
+    "angular-promise-buttons": "^0.1.13"
   }
 }

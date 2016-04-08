@@ -34,6 +34,7 @@
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./js/controllers.js"></script>
     <script src="./js/dirPagination.js"></script>
+    <script src="./bower_components/angular-promise-buttons/dist/angular-promise-buttons.js"></script>
   </head>
 
   <body>
@@ -71,10 +72,12 @@
               <tbody>
               <tr>
                 <td>
-                  <input ng-model="search.searchString" name="searchString" id="search" class="form-control" placeholder="Search" type = "text">
+                  <input ng-model="search.searchString" name="searchString" id="search" class="form-control" placeholder="Search" type = "text" ng-enter="buttonClick(search.searchString)">
                 </td>
                 <td>
-                  <!-- input type="button" class="btn btn-primary" value="Search" -->
+                  <button type="submit" class="btn btn-success" value="Submit" ng-click="buttonClick(search.searchString)" promise-btn="yourPromise">
+                   Search
+                  </button>
                 </td>
               </tr>
 
@@ -84,7 +87,6 @@
         </div>
       </div>
 
-      <div class="starter-template"></div>
 
       <div class="row">
         <div class="col-md-10">
