@@ -72,7 +72,12 @@
               <tbody>
               <tr>
                 <td>
-                  <input ng-model="search.searchString" name="searchString" id="search" class="form-control" placeholder="Search" type = "text" ng-enter="buttonClick(search.searchString)">
+                  <input ng-model="search.searchString" name="searchString" id="search"
+                         class="form-control" placeholder="Search" type = "text"
+                         ng-enter="buttonClick(search.searchString)"
+                         ng-change="buttonClick(search.searchString)"
+                         ng-model-options="{debounce:1000}"
+                  >
                 </td>
                 <td>
                   <button type="submit" class="btn btn-success" value="Submit" ng-click="buttonClick(search.searchString)" promise-btn="yourPromise">

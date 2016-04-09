@@ -35,6 +35,7 @@ myApp.controller('MainController', function ($scope, $http) {
   $scope.buttonClick = function(searchString) {
         console.log('clucked button ' + searchString);
         $scope.docs = [];
+        $scope.currentPage=1;
 
         $scope.yourPromise = $http({
           method: 'GET',
@@ -62,14 +63,14 @@ myApp.controller('MainController', function ($scope, $http) {
   };
 
   //This is a listener for autosuggest kind of feature
-  $scope.$watch('search.searchString', function(newVal, oldVal){
-      console.log("Search was changed to:"+newVal+" from " + oldVal);
-      //clean docs if necessary
-      //$scope.docs = [];
-      $scope.search.watch = newVal;
-      $scope.currentPage=1;
-      //console.log($scope.docs);
-  });
+  //$scope.$watch('search.searchString', function(newVal, oldVal){
+  //    console.log("Search was changed to:"+newVal+" from " + oldVal);
+  //    //clean docs if necessary
+  //    //$scope.docs = [];
+  //    $scope.search.watch = newVal;
+  //    $scope.currentPage=1;
+  //    //console.log($scope.docs);
+  //});
 });
 
 
